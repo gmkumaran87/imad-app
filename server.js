@@ -19,7 +19,7 @@ articleTwo: {
 	title: "Article-Two | Kumaran",
 	head: "ArticleTwo",
 	date: "1st Sep 2017",
-	content: `<p> This is my Second Article </p>
+	comment: `<p> This is my Second Article </p>
 	         <p> This is my Second Article </p>
 			 <p> This is my Second Article </p>`
 }
