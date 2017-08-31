@@ -43,15 +43,10 @@ function createTemplate(data){
                   ${date}
               </div>
               <div>
-                ${content}
+                ${comment}
               </div>
               <hr/>
               <h4>Comments</h4>
-              <div id="comment_form">
-              </div>
-              <div id="comments">
-                <center>Loading comments...</center>
-              </div>
           </div>
           <script type="text/javascript" src="/ui/article.js"></script>
       </body>
