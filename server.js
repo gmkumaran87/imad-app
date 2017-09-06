@@ -78,11 +78,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName',function(req,res){
+//app.get('/:articleName',function(req,res){
  // res.sendFile(path.join(__dirname,'ui', 'article-one.html'));
- var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
-});
+// var articleName = req.params.articleName;
+ // res.send(createTemplate(articles[articleName]));
+//});
 var pool = new Pool(config);
 app.get('/test-db',function(req,res) {
 	pool.query('SELECT * FROM test',function(err,result) {
@@ -94,10 +94,6 @@ app.get('/test-db',function(req,res) {
 	});
 })
 
-
-app.get('/article-three',function(req,res){
-    res.send("Hi This is my Third article.");
-});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
