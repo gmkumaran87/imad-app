@@ -59,7 +59,7 @@ function createTemplate(data){
                   ${head}
               </h3>
               <div>
-                  ${date}
+                  ${date.toDateString()}
               </div>
               <div>
                 ${comment}
@@ -92,7 +92,7 @@ app.get('/', function (req, res) {
 app.get('/articles/:articleName',function(req,res){
 
  //var articleName = ;
- pool.query("SELECT * FROM ARTICLE WHERE TITLE = '"+ req.params.articleName +"'", function(err,result){
+ pool.query("SELECT * FROM ARTICLE WHERE TITLE = $1", [req.params.articleName], function(err,result){
 	 if(err) {
 			res.status(500).send(err.toString());
 		}else{
