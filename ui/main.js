@@ -19,7 +19,7 @@ button.onclick = function() {
 	
 	request.onreadystatechange = function() {
 		if (request.readyState === XMLHttpRequest.DONE) {
-			f (request.status === 200){
+			if (request.status === 200){
 				var comment = request.responseText;
 				var span = document.getElementById('count');
 	            span.innerHTML = comment.toString();
